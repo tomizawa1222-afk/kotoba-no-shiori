@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import { UserButton, SignedIn, SignedOut } from '@clerk/nextjs';
+import { Button } from '@/app/components/ui/Button';
 
 export function Header() {
   return (
@@ -8,14 +10,21 @@ export function Header() {
           <span className="text-xl font-bold tracking-tight">言葉の栞</span>
         </Link>
         <div className="flex items-center gap-4">
-          <button className="rounded-full p-2 hover:bg-gray-100">
-            <span className="sr-only">通知</span>
-            🔔
-          </button>
-          <button className="rounded-full p-2 hover:bg-gray-100">
-            <span className="sr-only">検索</span>
-            🔍
-          </button>
+          <SignedIn>
+            <button className="rounded-full p-2 hover:bg-gray-100">
+              <span className="sr-only">通知</span>
+              🔔
+            </button>
+            <UserButton afterSignOutUrl="/" />
+          </SignedIn>
+          <SignedOut>
+            <Link href="/sign-in">
+              <Button size="sm" variant="secondary">ログイン</Button>
+            </Link>
+            <Link href="/sign-up">
+              <Button size="sm">登録</Button>
+            </Link>
+          </SignedOut>
         </div>
       </div>
     </header>

@@ -9,7 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@clerk/nextjs": "^6.36.8",
+    "@clerk/themes": "^2.4.48",
     "@radix-ui/react-slot": "^1.2.4",
+    "@supabase/ssr": "^0.8.0",
+    "@supabase/supabase-js": "^2.90.1",
     "@tailwindcss/postcss": "^4.1.18",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -17,6 +21,8 @@
     "next": "^15.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "server-only": "^0.0.1",
+    "svix": "^1.84.1",
     "tailwind-merge": "^3.4.0"
   },
   "devDependencies": {
