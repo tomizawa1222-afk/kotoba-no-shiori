@@ -9,8 +9,7 @@ const isProtectedRoute = createRouteMatcher([
 export default clerkMiddleware(async (auth, req) => {
   if (isProtectedRoute(req)) await auth.protect()
 }, {
-  // フォールバック用のダミーキーを設定してビルドエラーを回避
-  publishableKey: process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY || 'pk_test_dummy_fallback',
+  publishableKey: "pk_test_Y2VudHJhbC1wbGF0eXB1cy00OS5jbGVyay5hY2NvdW50cy5kZXYk",
 });
 
 export const config = {

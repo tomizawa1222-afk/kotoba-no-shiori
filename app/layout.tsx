@@ -25,6 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider
+      publishableKey="pk_test_Y2VudHJhbC1wbGF0eXB1cy00OS5jbGVyay5hY2NvdW50cy5kZXYk"
       appearance={{
         variables: { colorPrimary: '#000000' },
         elements: {
