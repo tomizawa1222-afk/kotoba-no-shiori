@@ -5,8 +5,6 @@ import './globals.css';
 import { Header } from './components/layout/Header';
 import { Footer } from './components/layout/Footer';
 
-export const dynamic = 'force-dynamic';
-
 const notoSansJP = Noto_Sans_JP({
   subsets: ['latin'],
   weight: ['400', '500', '700'],
